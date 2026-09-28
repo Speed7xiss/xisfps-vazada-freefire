@@ -1,0 +1,22 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37314.3 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LoaderBaseDX11", "LoaderBaseDX11\LoaderBaseDX11.vcxproj", "{3cafe442-eafc-4d1c-893c-3f146341d3e7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3cafe442-eafc-4d1c-893c-3f146341d3e7}.Release|x64.ActiveCfg = Release|x64
+		{3cafe442-eafc-4d1c-893c-3f146341d3e7}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CE42D373-950D-49E3-90C1-2E50B897F3CF}
+	EndGlobalSection
+EndGlobal

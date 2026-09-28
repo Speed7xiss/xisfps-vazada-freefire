@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release EXE|x64">
+      <Configuration>Release EXE</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{3cafe442-eafc-4d1c-893c-3f146341d3e7}</ProjectGuid>
+    <RootNamespace>Gengar</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>XisFps</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release EXE|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release EXE|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <UseLldLink>false</UseLldLink>
+    <IncludePath>$(ProjectDir)Imgui\includes\freetype\include;$(ProjectDir);$(ProjectDir)Imgui;$(ProjectDir)Auth;$(ProjectDir)Imgui\includes\imgui;$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)Includes;$(ProjectDir)Imgui\includes\freetype\win64;$(ProjectDir)Auth;$(DXSDK_DIR)Lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\atlmfc\lib\x64;C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64;C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\ucrt\x64;$(LibraryPath)</LibraryPath>
+    <OutDir>C:\Users\teu\Desktop\Correção FreeFire\x64\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\</IntDir>
+    <TargetName>arquivo</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release EXE|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <UseLldLink>false</UseLldLink>
+    <IncludePath>$(ProjectDir)Imgui\includes\freetype\include;$(ProjectDir);$(ProjectDir)Imgui;$(ProjectDir)Auth;$(ProjectDir)Imgui\includes\imgui;$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)Includes;$(ProjectDir)Imgui\includes\freetype\win64;$(ProjectDir)Auth;$(DXSDK_DIR)Lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\atlmfc\lib\x64;C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64;C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\ucrt\x64;$(LibraryPath)</LibraryPath>
+    <OutDir>C:\Users\teu\Desktop\Correção FreeFire\x64\$(Configuration)\</OutDir>
+    <IntDir>x64EXE\</IntDir>
+    <TargetName>arquivo</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;_WINTERNL_;_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>ntdll.lib;freetype.lib;winmm.lib;bcrypt.lib;dwmapi.lib;dxgi.lib;d3d11.lib;library_x64.lib;libcurl.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ProgramDatabaseFile />
+      <AdditionalOptions>/NODEFAULTLIB:LIBCMT %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release EXE|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;_WINTERNL_;_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH;BUILD_AS_EXE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>ntdll.lib;freetype.lib;winmm.lib;bcrypt.lib;dwmapi.lib;dxgi.lib;d3d11.lib;library_x64.lib;libcurl.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ProgramDatabaseFile />
+      <AdditionalOptions>/NODEFAULTLIB:LIBCMT %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="AntiDbg\AntiAttach.hpp" />
+    <ClInclude Include="AntiDbg\AntiDbg.hpp" />
+    <ClInclude Include="AntiDbg\AntiDump.hpp" />
+    <ClInclude Include="AntiDbg\Checks.hpp" />
+    <ClInclude Include="Imgui\includes\awesome\font_awesome.h" />
+    <ClInclude Include="globals.hh" />
+    <ClInclude Include="Cheat\Chams\Context.h" />
+    <ClInclude Include="Cheat\Chams\StreamContext.h" />
+    <ClInclude Include="Cheat\Chams\ChamsDefault.hpp" />
+    <ClInclude Include="Cheat\Chams\ChamsStream.hpp" />
+    <ClInclude Include="Imgui\includes\imgui\imconfig.h" />
+    <ClInclude Include="Imgui\includes\imgui\imgui.h" />
+    <ClInclude Include="Imgui\includes\imgui\imgui_freetype.h" />
+    <ClInclude Include="Imgui\includes\imgui\imgui_impl_dx11.h" />
+    <ClInclude Include="Imgui\includes\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="Imgui\includes\imgui\imgui_internal.h" />
+    <ClInclude Include="Imgui\includes\imgui\imgui_notify.h" />
+    <ClInclude Include="Imgui\includes\imgui\imgui_settings.h" />
+    <ClInclude Include="Imgui\includes\imgui\imspinner.h" />
+    <ClInclude Include="Imgui\includes\imgui\imstb_rectpack.h" />
+    <ClInclude Include="Imgui\includes\imgui\imstb_textedit.h" />
+    <ClInclude Include="Imgui\includes\imgui\imstb_truetype.h" />
+    <ClInclude Include="Imgui\includes\includes.h" />
+    <ClInclude Include="Imgui\includes\images.h" />
+    <ClInclude Include="Imgui\includes\fonts.h" />
+    <ClInclude Include="Imgui\includes\custom\custom.hpp" />
+    <ClInclude Include="Prefetch\Compress.hpp" />
+    <ClInclude Include="Prefetch\Prefetch.hpp" />
+    <ClInclude Include="XorStr\LazyImporter.hpp" />
+    <ClInclude Include="XorStr\XorStr.hpp" />
+    <ClInclude Include="Web\WebServer.hpp" />
+    <ClInclude Include="Auth\auth.hpp" />
+    <ClInclude Include="Auth\session_guard.hpp" />
+    <ClInclude Include="Sysmon\Sysmon.hpp" />
+    <ClInclude Include="LazyImporter.hpp" />
+    <ClInclude Include="Cheat\CheatManager.hpp" />
+    <ClInclude Include="Cheat\AimModules\AimModules.hpp" />
+    <ClInclude Include="Cheat\AimModules\HiResSleep.hpp" />
+    <ClInclude Include="Cheat\BugarPixel.hpp" />
+    <ClInclude Include="Cheat\Cheat.hpp" />
+    <ClInclude Include="Cheat\CheatStatus.hpp" />
+    <ClInclude Include="Cheat\Core.hpp" />
+    <ClInclude Include="Cheat\Draw\Draw.hpp" />
+    <ClInclude Include="Cheat\Draw\Fonts\EspFont.hpp" />
+    <ClInclude Include="Cheat\Draw\Fonts\VerdanaFont.hpp" />
+    <ClInclude Include="Cheat\Draw\Fonts\WeaponIconFont.hpp" />
+    <ClInclude Include="Cheat\Draw\Weapon\NameGun.hpp" />
+    <ClInclude Include="Cheat\EMemory.hpp" />
+    <ClInclude Include="Cheat\EspStream.hpp" />
+    <ClInclude Include="Cheat\Math\Math.hpp" />
+    <ClInclude Include="Cheat\Math\Unity\Transform\Transform.hpp" />
+    <ClInclude Include="Cheat\Math\Vectors\Vector3.hpp" />
+    <ClInclude Include="Cheat\Math\Vectors\Vector4.hpp" />
+    <ClInclude Include="Cheat\Memory\Memory.hpp" />
+    <ClInclude Include="Cheat\NTDLLDefines.hpp" />
+    <ClInclude Include="Cheat\Options.hpp" />
+    <ClInclude Include="Cheat\RayCast\RayCast.hpp" />
+    <ClInclude Include="Cheat\SharedFrame.hpp" />
+    <ClInclude Include="Cheat\SkinChanger\ClothesDB.hpp" />
+    <ClInclude Include="Cheat\SkinChanger\SkinChanger.hpp" />
+    <ClInclude Include="FrameWork\Render\Overlay\DiscordOverlay.hpp" />
+    <ClInclude Include="FrameWork\Render\Overlay\Overlay.hpp" />
+    <ClInclude Include="FrameWork\Render\Render\Render.hpp" />
+    <ClInclude Include="Imgui\monitors.h" />
+    <ClInclude Include="ReplaceBytes.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Imgui\includes\awesome\font_awesome.cpp" />
+    <ClCompile Include="Imgui\includes\imgui\imgui.cpp" />
+    <ClCompile Include="Imgui\includes\imgui\imgui_draw.cpp" />
+    <ClCompile Include="Imgui\includes\imgui\imgui_freetype.cpp" />
+    <ClCompile Include="Imgui\includes\imgui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="Imgui\includes\imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="Imgui\includes\imgui\imgui_tables.cpp" />
+    <ClCompile Include="Imgui\includes\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="AntiDbg\AntiDbg.cpp" />
+    <ClCompile Include="AntiDbg\Checks.cpp" />
+    <ClCompile Include="AntiDbg\AntiDump.cpp" />
+    <ClCompile Include="AntiDbg\AntiAttach.cpp" />
+    <ClCompile Include="Imgui\gui_xisfps_menu.cpp" />
+    <ClCompile Include="Imgui\menu\helpers\config.cpp" />
+    <ClCompile Include="Imgui\menu\helpers\debug_log.cpp" />
+    <ClCompile Include="Imgui\menu\helpers\draw.cpp" />
+    <ClCompile Include="Imgui\menu\helpers\fonts.cpp" />
+    <ClCompile Include="Imgui\menu\helpers\image.cpp" />
+    <ClCompile Include="Imgui\menu\helpers\search.cpp" />
+    <ClCompile Include="Imgui\menu\widgets\button.cpp" />
+    <ClCompile Include="Imgui\menu\widgets\button_keybind.cpp" />
+    <ClCompile Include="Imgui\menu\widgets\checkbox.cpp" />
+    <ClCompile Include="Imgui\menu\widgets\child.cpp" />
+    <ClCompile Include="Imgui\menu\widgets\cog.cpp" />
+    <ClCompile Include="Imgui\menu\widgets\color_edit.cpp" />
+    <ClCompile Include="Imgui\menu\widgets\color_position.cpp" />
+    <ClCompile Include="Imgui\menu\widgets\color_position_dual.cpp" />
+    <ClCompile Include="Imgui\menu\widgets\dropdown.cpp" />
+    <ClCompile Include="Imgui\menu\widgets\dropdown_cog.cpp" />
+    <ClCompile Include="Imgui\menu\widgets\helpers.cpp" />
+    <ClCompile Include="Imgui\menu\widgets\keybind.cpp" />
+    <ClCompile Include="Imgui\menu\widgets\notify.cpp" />
+    <ClCompile Include="Imgui\menu\widgets\range.cpp" />
+    <ClCompile Include="Imgui\menu\widgets\section.cpp" />
+    <ClCompile Include="Imgui\menu\widgets\slider.cpp" />
+    <ClCompile Include="Imgui\menu\widgets\slider_float_cog.cpp" />
+    <ClCompile Include="Imgui\menu\widgets\text_field.cpp" />
+    <ClCompile Include="Imgui\menu\widgets\window.cpp" />
+    <ClCompile Include="Cheat\CheatManager.cpp">
+      <ObjectFileName>$(IntDir)Cheat\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="Sysmon\Sysmon.cpp">
+      <ObjectFileName>$(IntDir)Sysmon\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="Cheat\Cheat.cpp">
+      <ObjectFileName>$(IntDir)Cheat\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="Cheat\BugarPixel.cpp">
+      <ObjectFileName>$(IntDir)Cheat\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="Cheat\EMemory.cpp">
+      <ObjectFileName>$(IntDir)Cheat\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="Cheat\EspStream.cpp">
+      <ObjectFileName>$(IntDir)Cheat\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="Cheat\SharedFrame.cpp">
+      <ObjectFileName>$(IntDir)Cheat\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="Cheat\AimModules\AimModules.cpp">
+      <ObjectFileName>$(IntDir)Cheat\AimModules\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="Cheat\Draw\Draw.cpp">
+      <ObjectFileName>$(IntDir)Cheat\Draw\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="Cheat\Draw\Fonts\EspFont.cpp">
+      <ObjectFileName>$(IntDir)Cheat\Draw\Fonts\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="Cheat\Draw\Weapon\NameGun.cpp">
+      <ObjectFileName>$(IntDir)Cheat\Draw\Weapon\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="Cheat\Math\Math.cpp">
+      <ObjectFileName>$(IntDir)Cheat\Math\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="Cheat\Math\Unity\Transform\Transform.cpp">
+      <ObjectFileName>$(IntDir)Cheat\Math\Unity\Transform\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="Cheat\Math\Vectors\Vector3.cpp">
+      <ObjectFileName>$(IntDir)Cheat\Math\Vectors\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="Cheat\Math\Vectors\Vector4.cpp">
+      <ObjectFileName>$(IntDir)Cheat\Math\Vectors\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="Cheat\Memory\Memory.cpp">
+      <ObjectFileName>$(IntDir)Cheat\Memory\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="Cheat\RayCast\RayCast.cpp">
+      <ObjectFileName>$(IntDir)Cheat\RayCast\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="Cheat\SkinChanger\SkinChanger.cpp">
+      <ObjectFileName>$(IntDir)Cheat\SkinChanger\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="FrameWork\Render\Overlay\Overlay.cpp">
+      <ObjectFileName>$(IntDir)FrameWork\Render\Overlay\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="FrameWork\Render\Overlay\DiscordOverlay.cpp">
+      <ObjectFileName>$(IntDir)FrameWork\Render\Overlay\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="FrameWork\Render\Render\Render.cpp">
+      <ObjectFileName>$(IntDir)FrameWork\Render\Render\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="DeleteSysmon\evtx_stealth.cpp">
+      <ObjectFileName>$(IntDir)DeleteSysmon\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="DeleteSysmon\wipe_logs.cpp">
+      <ObjectFileName>$(IntDir)DeleteSysmon\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="Web\WebServer.cpp">
+      <ObjectFileName>$(IntDir)Web\</ObjectFileName>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Includes\d3d11.lib" />
+    <Library Include="Includes\d3dx9.lib" />
+    <Library Include="Includes\d3dx10.lib" />
+    <Library Include="Includes\d3dx11.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+    <Import Project="..\packages\Microsoft.DXSDK.D3DX.9.29.952.8\build\native\Microsoft.DXSDK.D3DX.targets" Condition="Exists('..\packages\Microsoft.DXSDK.D3DX.9.29.952.8\build\native\Microsoft.DXSDK.D3DX.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.DXSDK.D3DX.9.29.952.8\build\native\Microsoft.DXSDK.D3DX.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.DXSDK.D3DX.9.29.952.8\build\native\Microsoft.DXSDK.D3DX.targets'))" />
+  </Target>
+</Project>
